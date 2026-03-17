@@ -1,0 +1,33 @@
+\documentclass[tikz, border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (4,3);
+    \coordinate (C) at (4,0);
+
+    \coordinate (M) at (2.8,2.1);
+    \coordinate (P) at (4,2.1);
+    \coordinate (Q) at (2.8,0);
+
+    \draw[black] (A) to (B);
+    \draw[black] (B) to (C);
+    \draw[black] (A) to (C);
+    \draw[dashed, black] (Q) to (M);
+    \draw[dashed, black] (M) to (P);
+    
+    \node[below left]  at (A) {$A$};
+    \node[above right] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+
+    \node[above left] at (M) {$M$};
+    \node[above right] at (P) {$P$};
+    \node[below left] at (Q) {$Q$};
+
+    \node[left] at ($(M)!0.5!(Q)$) {$x$};
+\end{tikzpicture}
+
+\end{document}

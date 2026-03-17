@@ -1,0 +1,1 @@
+Use `LaTeX` (and the `TikZ` package) to create geometry figures. Then, convert the generated PDF file to png using the following command: `magick -density 300 "file.pdf" -background white -alpha remove "file.png"`
