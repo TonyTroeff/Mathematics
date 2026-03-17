@@ -21,16 +21,21 @@
     % N = midpoint of BC
     \coordinate (N) at ($(B) !1/2! (C)$);
 
+    % Q = midpoint of AC
+    \coordinate (Q) at ($(A) !1/2! (C)$);
+
     \draw[black] (A) to (B);
     \draw[black] (B) to (D);	
     \draw[black] (D) to (A);
     \draw[black, dashed] (A) to (C);
     \draw[black, dashed] (B) to (C);
     \draw[black, dashed] (D) to (C);
+    \draw[black, dashed] (D) to (Q);
 
     \fill[red!10, opacity=0.5] (A) to (C) to (D) to cycle;
-     \fill[blue] (M) circle (1pt);
-     \fill[blue] (N) circle (1pt);
+    \fill[blue] (M) circle (1pt);
+    \fill[blue] (N) circle (1pt);
+    \fill[black] (Q) circle (1pt);
 
     % Labels
     \node[left] at (A) {$A$};
@@ -39,6 +44,7 @@
     \node[above] at (D) {$D$};
     \node[above right] at (M) {$M$};
     \node[above right] at (N) {$N$};
+    \node[below] at (Q) {$Q$};
 
     % Draw vectors
     \draw[->, thick, blue] (B) to (M);
